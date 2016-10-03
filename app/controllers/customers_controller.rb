@@ -9,7 +9,7 @@ class CustomersController < ApplicationController
 
   def create
     @form = NewCustomerForm.new
-    if @form.update(params[:new_customer_form])
+    if @form.update(params[:customer])
       redirect_to customers_path
     else
       flash.now[:error] = "Please fix the following errors: " + @form.errors.full_messages.to_sentence
@@ -25,7 +25,7 @@ class CustomersController < ApplicationController
   def update
     @customer = Customer.find(params[:id])
     @form = EditCustomerForm.new(@customer)
-    if @form.update(params[:edit_customer_form])
+    if @form.update(params[:customer])
       redirect_to customers_path
     else
       flash.now[:error] = "Please fix the following errors: " + @form.errors.full_messages.to_sentence
