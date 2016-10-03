@@ -1,0 +1,12 @@
+<h1>Customers</h1>
+
+<table>
+	<tr>
+		<th>Name<th>
+		<th>Email</th>
+		<th>Phone number</th>
+	</tr>
+	<%= render @customers %>
+</table>
+
+<%= link_to "New customer", new_customer_path %>

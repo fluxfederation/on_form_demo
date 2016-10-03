@@ -1,0 +1,26 @@
+<h1>Edit customer</h1>
+
+<% if flash[:error] %>
+	<p class="error"><%= flash[:error] %></p>
+<% end %>
+
+<%= form_for @form, as: :edit_customer_form, url: customer_path(@form.customer), :method => :put do |f| %>
+	<p>
+		<%= f.label :name, 'Name' %>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :email, 'Email' %>
+		<%= f.text_field :email %>
+	</p>
+
+	<p>
+		<%= f.label :phone_number, 'Phone' %>
+		<%= f.text_field :phone_number %>
+	</p>
+
+	<p>
+		<%= f.submit "Update" %>
+	</p>
+<% end %>
