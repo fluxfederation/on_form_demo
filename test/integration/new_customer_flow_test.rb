@@ -13,6 +13,7 @@ class NewCustomerFlowTest < ActionDispatch::IntegrationTest
     visit new_customer_path
     fill_in "Name", with: "Sam Jones"
     fill_in "Phone", with: "1234-5678"
+    check "I give ThisCo permission to email me at this address"
     click_on "Create"
 
     assert page.has_content?, "Please fix the following errors: Email can't be blank"

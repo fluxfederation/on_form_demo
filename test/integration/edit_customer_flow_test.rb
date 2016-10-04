@@ -14,9 +14,13 @@ class NewCustomerFlowTest < ActionDispatch::IntegrationTest
     fill_in "Email", with: ""
     click_on "Update"
 
-    assert page.has_content?, "Please fix the following errors: Email can't be blank"
+    assert page.has_content?, "Please fix the following errors: Email can't be blank, Email permission must be accepted"
 
     fill_in "Email", with: "new@example.com"
+    click_on "Update"
+    assert page.has_content?, "Please fix the following errors: Email permission must be accepted"
+
+    check "I give ThisCo permission to email me at this address"
     assert_no_difference -> { Customer.count } do
       click_on "Update"
       assert !page.has_content?("Please fix the following errors")
