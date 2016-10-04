@@ -4,7 +4,7 @@
 	<p class="error"><%= flash[:error] %></p>
 <% end %>
 
-<%= form_for @form, as: :customer, url: customers_path do |f| %>
+<%= form_for @form do |f| %>
 	<p>
 		<%= f.label :name, 'Name' %>
 		<%= f.text_field :name %>

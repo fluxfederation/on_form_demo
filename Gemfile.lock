@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:powershop/on_form.git
-  revision: 16c2c134b8cdc1e3bbc4949a98863a66195ec4c5
+  revision: 3e813fac6897aca7e893ba1dccb8cc45822414d8
   branch: master
   specs:
     on_form (2.2.2)
