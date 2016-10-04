@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:powershop/on_form.git
-  revision: 3e813fac6897aca7e893ba1dccb8cc45822414d8
+  revision: 49480a5beaae9e65919095f21ef3a147beae6e1f
   branch: master
   specs:
-    on_form (2.2.2)
+    on_form (2.3.0)
       activemodel
       activerecord
 
