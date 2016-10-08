@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NewCustomerFlowTest < ActionDispatch::IntegrationTest
+class EditCustomerFlowTest < ActionDispatch::IntegrationTest
   test "can see the customer list and navigate to the form to edit a customer" do
     visit customers_path
     assert page.has_content? "Customers"
